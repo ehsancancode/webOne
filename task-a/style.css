@@ -1,0 +1,33 @@
+/*
+All rights reserved
+Author: Ehsan Khan (ehsan.khan@centria.fi)
+Date: 15/09/2025
+*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #f3f2f2;
+  }
+  
+  h1 {
+    color: #3d5062;
+    font-size: 40px;
+  }
+  
+  p {
+    color: #363535;
+    font-size: 22px;
+  }
+  .youtubeLink {
+    margin: 20px;
+    font-size: medium;
+  }
+  .youtubeLink a {
+    color: rgb(86, 80, 148);
+    font-size: 19px;
+    text-decoration: underline;
+  }
+  .youtubeLink a:hover {
+    text-decoration: underline;
+  }
