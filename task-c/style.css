@@ -1,0 +1,35 @@
+/*
+Author: Ehsan Khan (ehsan.khan@centria.fi)
+Date: 2025-09-27
+*/
+body {
+    background-color: rgb(227, 227, 227);
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+}
+  /* Center video and audio as block elements */
+  video, audio {
+    display: block;
+    margin: 20px auto;    
+    max-width: 100%;
+  }
+  
+  /* Add spacing between main sections (like <p> blocks) */
+  p {
+    margin-bottom: 20px;
+    line-height: 1.6;     
+    text-align: center;  
+  }
+  h3 {
+    text-align: center;
+  }
+  /* Make images responsive but never larger than 500px */
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;       
+    margin: 0 auto;       
+  }
+  
