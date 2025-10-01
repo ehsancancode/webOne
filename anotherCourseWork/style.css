@@ -1,0 +1,59 @@
+/*
+Author: Ehsan Khan (ehsan.khan@centria.fi)
+Date: 2025-10-01
+*/
+
+/* General page setup */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #f9fafb;
+    color: #333;
+}
+
+/* Header section */
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 20px 10px;
+}
+
+header img {
+    width: 120px;
+    margin-top: 15px;
+}
+
+/* Sections */
+main {
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+/* Team list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #eee;
+    padding: 10px;
+    font-size: 14px;
+}
