@@ -11,7 +11,8 @@ body {
   /* Center video and audio as block elements */
   video, audio {
     display: block;
-    margin: 20px auto;    
+    margin: 20px auto;
+    width: 20%;
     max-width: 100%;
   }
   
