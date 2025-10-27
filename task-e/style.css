@@ -117,11 +117,12 @@ body {
 */
 .table thead th:nth-child(1),
 .table tbody td:nth-child(1) {
-    width: 40%;
+    width: 35%; /* Course column */
 }
 .table thead th:nth-child(n+2),
 .table tbody td:nth-child(n+2) {
-    width: 15%;
+    width: 13%; /* 5 days × 13% = 65%  → 35% + 65% = 100% */
+    text-align: center;
 }
 
 /* Center the day columns (Monâ€“Thu) */
