@@ -14,7 +14,6 @@
   Author: Ehsan Khan
   Date: 2025-11-06
 -->
-
 <header class="site-header">
     <h1>Registration page</h1>
 </header>
@@ -35,10 +34,15 @@
 
             <form id="registerForm" novalidate>
                 <input type="hidden" id="timestamp" name="timestamp">
+                <label for="fullName">Full name:</label>
                 <div class="form-row">
                     <input id="fullName" name="fullName" type="text" placeholder="First and last name">
-                    <input id="courseName" name="courseName" type="text" required placeholder="e.g., Web Development Basics">
                     <span class="error" id="nameError"></span> <!-- custom error -->
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com">
+                    <span class="error" id="emailError"></span>
                 </div>
                 <!-- PHONE -->
                 <div class="form-row">
@@ -59,7 +63,6 @@
                     </label>
                     <span class="error" id="termsError"></span>
                 </div>
-
                 <!-- BUTTONS -->
                 <div class="form-row">
                     <button type="submit" class="btn">Submit</button>
@@ -68,7 +71,6 @@
             </form>
         </section>
     </div>
-
     <!--NEW TABLE STRUCTURE -->
     <div class="table-wrap">
         <table class="table" id="submissionsTable">
