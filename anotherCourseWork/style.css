@@ -1,0 +1,81 @@
+/*
+Author: Ehsan Khan (ehsan.khan@centria.fi)
+Date: 2025-10-16
+*/
+
+/* General page setup */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #f9fafb;
+    color: #333;
+}
+
+/* Header section */
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 20px 10px;
+}
+
+header img {
+    width: 120px;
+    margin-top: 15px;
+}
+
+/* Main layout */
+main {
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Unified styling for all sections */
+.team, .press, .about {
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center; /* ✅ Centers all section content */
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Unified section headings */
+.team h2, .press h2, .about h2 {
+    text-align: center;
+    color: #004aad; /* Consistent blue tone */
+    margin-bottom: 15px;
+}
+
+/* Team list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+/* Paragraph text inside sections */
+.team p, .press p, .about p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    text-align: center; /* ✅ Centers all paragraphs */
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #eee;
+    padding: 10px;
+    font-size: 14px;
+}

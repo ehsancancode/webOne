@@ -1,51 +1,91 @@
-<!--
-Group Members: Ehsan and Igor
-Author: Ehsan Khan (ehsan.khan@centria.fi)
-Date: 2025-10-16
--->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Innovators</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
+
 <body>
-<header>
-    <h1>🚀 Team Innovators</h1>
-    <h3>"Think. Build. Grow."</h3>
-    <img src="ChatGPT%20Image%20Oct%201,%202025,%2007_40_52%20PM.png" alt="Team Icon">
+<!--
+  Author: Ehsan Khan
+  Date: 2025-11-06
+-->
+<header class="site-header">
+    <h1>Registration page</h1>
 </header>
 
-<main>
-    <section class="team">
-        <h2>Our Members</h2>
-        <ul>
-            <li><b>Ehsan</b> – Tech Lead & Developer</li>
-            <li><b>Igor</b> – QA/Research & Documentation</li>
-        </ul>
-    </section>
+<main class="content">
+    <!-- Top row split into two blocks -->
+    <div class="top-grid">
+        <!-- Student info (30%) -->
+        <section class="student-info" aria-label="Student information">
+            <h2 class="student-info-title">Information</h2>
+            <p><span class="student-name">Ehsan Khan</span></p>
+            <p><span class="student-group">Group 7</span></p>
+        </section>
 
-    <section class="press">
-        <h2>Our Focus</h2>
-        <p><b>Domain:</b> Education – We want to create tools that improve student collaboration and learning.</p>
-        <p><b>Platform:</b> Web – Accessible from anywhere and easy to maintain.</p>
-    </section>
+        <!-- Controls (70%): add course + day marks -->
+        <section class="controls" aria-label="Form">
+            <h2 class="controls-title">Fill the form</h2>
 
-    <section class="about">
-        <h2>About Our Project</h2>
-        <p>
-            Team Innovators is developing a collaborative web platform designed to help students work together more effectively on personal and group projects.
-            Our goal is to bring everything a student team needs into one place — from creating groups and sharing ideas to managing tasks and holding online meetings.
-            Inspired by our motto, <i>“Think. Build. Grow.”</i>, our system encourages students to brainstorm ideas, turn them into real projects, and continue improving them over time.
-            Whether it’s for classwork or personal goals, our platform aims to make teamwork easier, smarter, and more connected.
-        </p>
-    </section>
+            <form id="registerForm" novalidate>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <label for="fullName">Full name:</label>
+                <div class="form-row">
+                    <input id="fullName" name="fullName" type="text" placeholder="First and last name">
+                    <span class="error" id="nameError"></span> <!-- custom error -->
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com">
+                    <span class="error" id="emailError"></span>
+                </div>
+                <!-- PHONE -->
+                <div class="form-row">
+                    <label for="phone">Phone:</label>
+                    <input id="phone" name="phone" type="tel" placeholder="+358401234567">
+                    <span class="error" id="phoneError"></span>
+                </div>
+                <!-- BIRTH DATE -->
+                <div class="form-row">
+                    <label for="birthDate">Birth date:</label>
+                    <input id="birthDate" name="birthDate" type="date">
+                    <span class="error" id="dateError"></span>
+                </div>
+                <!-- TERMS CHECKBOX -->
+                <div class="form-row">
+                    <label>
+                        <input id="terms" type="checkbox"> I accept the terms
+                    </label>
+                    <span class="error" id="termsError"></span>
+                </div>
+                <!-- BUTTONS -->
+                <div class="form-row">
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!--NEW TABLE STRUCTURE -->
+    <div class="table-wrap">
+        <table class="table" id="submissionsTable">
+            <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Birth Date</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 </main>
-
-<footer>
-    <p>© 2025 Team Innovators</p>
-</footer>
 </body>
 </html>
