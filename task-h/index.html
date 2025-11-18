@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="index.js" defer></script>
+</head>
+
+<body
+class="bg-slate-100 text-slate-800 font-sans">
+
+<!--
+  Author: Ehsan Khan
+  Date: 2025-11-06
+-->
+
+<header
+class="bg-blue-900 text-white py-6 text-center shadow">
+<h1 class="text-2xl font-semibold">Registration page</h1>
+</header>
+
+<main
+class="max-w-4xl mx-auto p-6">
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Student info -->
+    <section
+    class="bg-white p-4 rounded-lg shadow border border-slate-300"
+    aria-label="Student information">
+    <h2 class="text-xl font-semibold mb-2">Information</h2>
+    <p class="m-0"><span class="font-medium">Ehsan Khan</span></p>
+    <p class="m-0 mt-2"><span class="font-medium">Group 7</span></p>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section
+    class="bg-white p-6 rounded-lg shadow border border-slate-300">
+
+    <h2 class="text-xl font-semibold mb-4">Fill the form</h2>
+
+    <form id="registerForm" novalidate>
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <!-- FULL NAME -->
+        <label for="fullName" class="font-medium">Full name:</label>
+        <div
+        class="flex flex-col gap-1 mb-4">
+        <input id="fullName" name="fullName" type="text"
+               placeholder="First and last name"
+               class="p-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-500">
+        <span class="text-red-600 text-sm" id="nameError"></span>
+</div>
+
+<!-- EMAIL -->
+<div class="flex flex-col gap-1 mb-4">
+    <label for="email" class="font-medium">Email:</label>
+    <input id="email" name="email" type="email"
+           placeholder="you@example.com"
+           class="p-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-500">
+    <span class="text-red-600 text-sm" id="emailError"></span>
+</div>
+
+<!-- PHONE -->
+<div class="flex flex-col gap-1 mb-4">
+    <label for="phone" class="font-medium">Phone:</label>
+    <input id="phone" name="phone" type="tel"
+           placeholder="+358401234567"
+           class="p-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-500">
+    <span class="text-red-600 text-sm" id="phoneError"></span>
+</div>
+
+<!-- BIRTH DATE -->
+<div class="flex flex-col gap-1 mb-4">
+    <label for="birthDate" class="font-medium">Birth date:</label>
+    <input id="birthDate" name="birthDate" type="date"
+           class="p-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-500">
+    <span class="text-red-600 text-sm" id="dateError"></span>
+</div>
+
+<!-- TERMS -->
+<div class="flex flex-col gap-1 mb-4">
+    <label class="flex items-center gap-2">
+        <input id="terms" type="checkbox"
+               class="w-4 h-4 accent-blue-600">
+        <span class="font-medium">I accept the terms</span>
+    </label>
+    <span class="text-red-600 text-sm" id="termsError"></span>
+</div>
+
+<!-- BUTTONS -->
+<div class="flex gap-3">
+    <button type="submit"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        Submit
+    </button>
+    <button type="reset"
+            class="bg-gray-300 text-slate-800 px-4 py-2 rounded hover:bg-gray-400 transition">
+        Clear
+    </button>
+</div>
+</form>
+</section>
+</div>
+
+<!-- TABLE -->
+<div
+class="bg-white mt-8 p-4 rounded-lg shadow border border-slate-300 overflow-x-auto">
+
+<table
+        class="w-full text-sm md:text-base border border-slate-300 rounded">
+    <thead class="bg-blue-900 text-white">
+    <tr>
+        <th class="p-3 text-left">Timestamp</th>
+        <th class="p-3 text-left">Full Name</th>
+        <th class="p-3 text-left">Email</th>
+        <th class="p-3 text-left">Phone</th>
+        <th class="p-3 text-left">Birth Date</th>
+    </tr>
+    </thead>
+    <tbody id="submissionsTableBody">
+    <!-- rows inserted by JS -->
+    </tbody>
+</table>
+</div>
+
+</main>
+</body>
+</html>
