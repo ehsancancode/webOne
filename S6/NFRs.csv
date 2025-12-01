@@ -1,0 +1,7 @@
+ID,Category,Measurable Statement,Rationale,Verification Approach,Test Plan ID,Owner
+NFR-1,Performance,Alerts within 5 minutes of breach,Prevent spoilage,Time alert delivery,T-PERF-1,Ehsan
+NFR-2,Reliability,99% uptime during business hours,Ensure system availability,Monitor uptime,T-REL-1,Igor
+NFR-3,Security,Rate-limit login attempts to max 5 per minute,Reduce unauthorized access,Simulated brute-force,T-SEC-1,Ehsan
+NFR-4,Performance,Dashboard loads under 3 seconds,Quick access for owners,Page load timing,T-PERF-2,Igor
+NFR-5,Accuracy,Sensors must stay within ±1°C after calibration,Ensure reliable readings,Calibration test,T-ACC-1,Igor
+NFR-6,Availability,Alert service uptime 99%,Avoid missed alerts,Uptime monitor,T-REL-2,Ehsan

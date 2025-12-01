@@ -1,0 +1,6 @@
+ID,Description (hypothesis),Cause,Impact,L,S,Exposure,Owner,First Action,Trigger,Next Review
+RISK-1,False alerts from door openings,Brief temperature spikes,User distrust,3,4,12,Ehsan,Add 2min delay,>5% false alerts,2024-12-01
+RISK-2,Sensor battery dies early,Cheap batteries,Missed readings,3,5,15,Ehsan,Add low-battery monitoring,Voltage <20%,2024-12-02
+RISK-3,SMS provider outage,External dependency,Delayed alerts,2,4,8,Igor,Add email fallback,SMS failures >10%,2024-12-03
+RISK-4,Incorrect sensor calibration,User error,Bad temperature readings,3,3,9,Ehsan,Add calibration prompt,Drift >1°C,2024-12-05
+RISK-5,Backend downtime,Cloud instability,Missed alerts,2,5,10,Igor,Add uptime alarms,Uptime <99%,2024-12-06

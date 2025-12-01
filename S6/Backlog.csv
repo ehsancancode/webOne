@@ -1,0 +1,9 @@
+ID,Epic,Story,Type,MoSCoW,Estimate,ACs (Gherkin inline),Linked NFRs,Planned Test IDs,Notes
+ST-1,Monitoring,As a kiosk owner I want temperature alerts,Feature,Must,5,"Given temp > -18°C for 5min Then send SMS alert","NFR-1;NFR-2",T-001,Core feature
+ST-2,Monitoring,As owner I want to see device status,Feature,Must,3,"Given no data for 60s Then show stale status","NFR-2;NFR-4",T-002,From Task 2
+ST-3,Monitoring,As an owner I want alert history,Feature,Should,3,"Given I open history page Then show past alerts sorted by time",NFR-1,T-003,Useful for audits
+ST-4,Config,As an owner I want threshold settings,Feature,Should,5,"Given I save new threshold Then system uses it for next checks",NFR-1,T-004,Custom limits
+ST-5,Status,As a technician I want heartbeat info,Feature,Must,3,"Given device silent >60s Then flag stale status",NFR-2,T-005,Installer need
+ST-6,Security,As admin I want login rate limiting,Feature,Must,3,"Given >5 failed logins/min Then block for 10min",NFR-3,T-006,Security baseline
+ST-7,Reports,As manager I want weekly summary reports,Feature,Could,2,"Given week ends Then generate PDF summary",NFR-4,T-007,Low priority
+ST-8,Monitoring,As owner I want sensor calibration prompts,Feature,Could,2,"Given sensor drift >1°C Then suggest calibration",NFR-5,T-008,Accuracy

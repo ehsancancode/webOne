@@ -1,0 +1,1 @@
+I used GenAI to help expand the backlog stories, complete the NFR list, fill in the risk register, and write the communication strategy. Prompts were short and general, like “generate three more NFRs for a freezer alert system.” I reviewed each output and edited any parts that didn’t fit our project. No sensitive or private information was included in any prompt.
