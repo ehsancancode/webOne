@@ -3,6 +3,7 @@
 Team page: https://ehsancancode.github.io/webOne/
 https://github.com/ehsancancode/webOne/tree/main/S6 # To view the contents of files
 
+
 This folder contains all required S6 deliverables:
 - Vision_OnePager.pdf
 - Stakeholder_Map.pdf
