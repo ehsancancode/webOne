@@ -2,8 +2,8 @@
 
 Team page: https://ehsancancode.github.io/webOne/anotherCourseWork/index2.html
 
-https://github.com/ehsancancode/webOne/tree/main/S6 # To view the contents of files
-
+S6 folder (GitHub view):  
+https://github.com/ehsancancode/webOne/tree/main/S6
 
 This folder contains all required S6 deliverables:
 - Vision_OnePager.pdf
@@ -15,3 +15,4 @@ This folder contains all required S6 deliverables:
 - RiskRegister.csv
 - Traceability.csv
 - AI_Use_Note.md
+
