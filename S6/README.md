@@ -1,6 +1,7 @@
 # Session 6 – Smart Freezer Alerts
 
-Team page: https://ehsancancode.github.io/webOne/
+Team page: https://ehsancancode.github.io/webOne/anotherCourseWork/index2.html
+
 https://github.com/ehsancancode/webOne/tree/main/S6 # To view the contents of files
 
 
