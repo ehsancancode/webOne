@@ -1,0 +1,107 @@
+<!--
+Author: Ehsan Khan (ehsan.khan@centria.fi)
+Date: 2025-12-05
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyStay – Rental Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <nav class="navbar">
+        <h2 class="logo">SkyStay Apartments</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a class="active" href="order.html">Order</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="order-main">
+
+    <section class="order-intro">
+        <h1>Rental Order Request</h1>
+        <p>
+            Fill out the form below to request a rental. We will review your request
+            and contact you with availability and confirmation details.
+        </p>
+    </section>
+
+    <section class="order-form-section">
+
+        <form action="#" method="post" class="order-form">
+
+            <fieldset>
+                <legend>Customer Information</legend>
+
+                <label for="fullname">Full Name:</label>
+                <input id="fullname" name="fullname" type="text" required>
+
+                <label for="email">Email Address:</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input id="phone" name="phone" type="tel" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Rental Details</legend>
+
+                <label for="item">Item to Rent:</label>
+                <select id="item" name="item" required>
+                    <option value="">-- Select Apartment --</option>
+                    <option>Cozy Studio</option>
+                    <option>1-Bedroom Modern</option>
+                    <option>2-Bedroom Premium</option>
+                    <option>Compact Studio</option>
+                    <option>Urban Loft</option>
+                    <option>Family Apartment</option>
+                </select>
+
+                <label for="start">Start Date:</label>
+                <input id="start" name="start" type="date" required>
+
+                <label for="end">End Date:</label>
+                <input id="end" name="end" type="date" required>
+
+                <label for="quantity">Quantity:</label>
+                <input id="quantity" name="quantity" type="number" min="1" max="10" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+
+                <label for="message">Message / Special Requests:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <label class="checkbox-row">
+                    <input type="checkbox" required>
+                    I accept the rental terms and privacy policy.
+                </label>
+
+                <label class="checkbox-row">
+                    <input type="checkbox">
+                    Subscribe to newsletter (optional)
+                </label>
+            </fieldset>
+
+            <button type="submit" class="cta-btn large">Submit Rental Request</button>
+
+        </form>
+
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 SkyStay Apartments – All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

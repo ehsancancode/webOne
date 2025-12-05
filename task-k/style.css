@@ -1,0 +1,344 @@
+/*
+Author: Ehsan Khan (ehsan.khan@centria.fi)
+Date: 2025-11-19
+*/
+/* GLOBAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fa;
+    color: #333;
+}
+
+/* Slightly larger paragraph and general text for readability */
+p, li, label, input, select, textarea {
+    font-size: 24px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+.site-header {
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #004aad;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #004aad;
+    font-size: 18px;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #004aad;
+}
+
+/* HERO SECTION */
+.hero {
+    background: url('anotherHero.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 160px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.cta-btn {
+    background: #0077ff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 18px;
+    display: inline-block;
+    transition: 0.2s;
+    margin: 5px;
+}
+
+.cta-btn:hover {
+    background: #005fcc;
+}
+
+.cta-btn.large {
+    padding: 16px 35px;
+    font-size: 20px;
+}
+
+/* SECONDARY BUTTON */
+.cta-btn.secondary {
+    background: #00c853;
+}
+.cta-btn.secondary:hover {
+    background: #009c3f;
+}
+
+/* ABOUT SECTION */
+.about-company {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-company h2 {
+    color: #100f0f;
+    margin-bottom: 20px;
+}
+
+/* APARTMENT GALLERY */
+.apartment-gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: #004aad;
+}
+
+/* FEATURES */
+.features {
+    background: #e8f1ff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    font-size: 22px;
+}
+
+.features li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* CTA SECTION */
+.cta-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #333;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --------------------------- */
+/* CATALOG PAGE */
+/* --------------------------- */
+
+.catalog-intro, .order-intro {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.catalog-example-img {
+    width: 60%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.product-grid {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1100px;
+    margin: auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: bold;
+    color: #004aad;
+}
+
+.catalog-video {
+    width: 70%;
+    max-width: 800px;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* --------------------------- */
+/* ORDER FORM */
+/* --------------------------- */
+
+.order-form-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.order-form fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.order-form legend {
+    font-weight: bold;
+    color: #004aad;
+}
+
+.order-form label {
+    display: block;
+    margin: 12px 0 5px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    font-size: 16px;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* --------------------------- */
+/* RESPONSIVE FIXES */
+/* --------------------------- */
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .catalog-video {
+        width: 95%;
+    }
+}
+/* Standard spacing for section titles */
+.section-title {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #004aad;
+    font-weight: bold;
+}
+
+.video-section {
+    text-align: center;
+    padding: 20px;
+}
+
