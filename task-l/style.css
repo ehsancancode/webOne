@@ -1,0 +1,352 @@
+
+/* =======================================
+   GLOBAL BASE STYLES
+======================================= */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Larger, modern text scale */
+h1 { font-size: 52px; font-weight: 700; }
+h2 { font-size: 36px; font-weight: 600; }
+h3 { font-size: 26px; font-weight: 600; }
+p, li { font-size: 25px; line-height: 1.8; }
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* Fade-in animation */
+.fade {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.7s ease;
+}
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =======================================
+   NAVBAR
+======================================= */
+
+.site-header {
+    background: #ffffffdd;
+    backdrop-filter: blur(7px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+}
+
+.logo {
+    font-size: 42px;
+    color: #004aad;
+    font-weight: 800;
+}
+
+/* Desktop nav */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #004aad;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nav-links a.active {
+    border-bottom: 3px solid #004aad;
+}
+
+/* Mobile menu button */
+.menu-btn {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+    .menu-btn { display: block; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 80px;
+        background: white;
+        width: 220px;
+        flex-direction: column;
+        padding: 25px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        border-radius: 12px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* =======================================
+   HERO SECTION
+======================================= */
+
+.hero {
+    background: url("example.jpg") center/cover no-repeat;
+    padding: 180px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 26px;
+}
+
+/* CTA Buttons */
+.cta-btn {
+    padding: 16px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    display: inline-block;
+    margin: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+}
+
+.cta-btn.primary {
+    background: #0077ff;
+    color: white;
+}
+
+.cta-btn.secondary {
+    background: #00c853;
+    color: white;
+}
+
+/* =======================================
+   CARD COMPONENTS
+======================================= */
+
+.cards, .grid {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    margin-top: 40px;
+}
+
+.card, .product-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.card:hover, .product-card:hover {
+    transform: translateY(-6px);
+}
+
+.card img, .product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card h3, .product-card h3 {
+    margin: 14px 18px;
+    font-size: 26px;
+}
+
+.card p, .product-card p {
+    margin: 0 18px 16px;
+    font-size: 22px;
+}
+
+.price {
+    font-weight: bold;
+    color: #004aad;
+    font-size: 22px;
+}
+
+/* =======================================
+   ORDER FORM — MODERN, MERGED, FIXED
+======================================= */
+
+.order-form-section {
+    max-width: 700px;
+    margin: 40px auto 60px;
+}
+
+.order-intro p {
+    max-width: 700px;
+}
+
+/* Main form container */
+.order-form {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+/* Fieldset spacing */
+.order-form fieldset {
+    border: none;
+    margin-bottom: 35px;
+}
+
+/* Section headers */
+.order-form legend {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #004aad;
+}
+
+/* Labels */
+.order-form label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #222;
+}
+
+/* Input fields */
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 16px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    background: #fcfcfc;
+    margin-bottom: 16px;
+    transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Focus state */
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 2px rgba(0,119,255,0.2);
+    outline: none;
+}
+
+/* Two-column layout */
+.two-col {
+    display: flex;
+    gap: 22px;
+}
+
+.two-col > div {
+    flex: 1;
+}
+
+/* Fix date picker size */
+.order-form input[type="date"] {
+    min-height: 55px;
+    font-size: 22px;
+}
+
+/* Checkbox rows */
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.checkbox-row input {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Submit button */
+.order-form button {
+    width: 100%;
+    padding: 18px;
+    font-size: 24px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+
+footer {
+    background: #333;
+    color: #ddd;
+    padding: 24px;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 20px;
+}
+/* Center the heading + intro text above the form */
+.order-intro {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.order-intro h1 {
+    margin-bottom: 10px;
+}
+
+.order-intro p {
+    font-size: 22px;
+    margin: 0 auto;
+}

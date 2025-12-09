@@ -1,0 +1,108 @@
+<!--
+Author: Ehsan Khan
+Date: 2025-12-07
+refined Catalog Page
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyStay – Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <nav class="navbar container">
+        <h2 class="logo">SkyStay Apartments</h2>
+
+        <div class="menu-btn">☰</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="catalog.html">Catalog</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="catalog-intro container fade">
+        <h1>Our Rental Catalog</h1>
+        <p>Choose from our modern, fully furnished apartments.</p>
+
+        <img src="example.jpg" alt="Example apartment image" class="catalog-example-img" style="border-radius: 12px; margin-top: 20px;">
+    </section>
+
+    <section class="product-grid container fade">
+        <h2>Available Apartments</h2>
+
+        <div class="grid">
+
+            <article class="product-card">
+                <img src="anotherstudio.jpg">
+                <h3>Cozy Studio</h3>
+                <p>Perfect for solo travelers.</p>
+                <p class="price">39 €/d</p>
+            </article>
+
+            <article class="product-card">
+                <img src="1 bedroom.jpg">
+                <h3>1-Bedroom Modern</h3>
+                <p>Bright, spacious, and includes workspace.</p>
+                <p class="price">59 €/d</p>
+            </article>
+
+            <article class="product-card">
+                <img src="premium.jpg">
+                <h3>2-Bedroom Premium</h3>
+                <p>Balcony views and stylish interior.</p>
+                <p class="price">89 €/d</p>
+            </article>
+
+            <article class="product-card">
+                <img src="studio2.jpg">
+                <h3>Compact Studio</h3>
+                <p>Affordable option with essentials.</p>
+                <p class="price">35 €/d</p>
+            </article>
+
+            <article class="product-card">
+                <img src="loft.jpg">
+                <h3>Urban Loft</h3>
+                <p>Modern furniture & high ceilings.</p>
+                <p class="price">75 €/d</p>
+            </article>
+
+            <article class="product-card">
+                <img src="family.jpg">
+                <h3>Family Apartment</h3>
+                <p>Perfect for families up to 5 people.</p>
+                <p class="price">120 €/d</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="video-section container fade">
+        <h2 class="section-title">Apartment Overview</h2>
+
+        <video controls preload="metadata" poster="poster.jpg" class="catalog-video">
+            <source src="tour.mp4" type="video/mp4">
+            <track src="captions.vtt" kind="captions" srclang="en" label="English">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
+
+</main>
+
+<footer>
+    © 2025 SkyStay Apartments – All Rights Reserved
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
