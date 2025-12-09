@@ -58,3 +58,8 @@ What I Improved (based on feedback + self-review)
     Added descriptive alt text for images.
     
     Ensured consistent use of containers and spacing.
+
+Short Change Log by Commit History for Task-L:
+        01bea2f - fixed small bug
+        b30d843 - add missing README file
+        baee412 - do task-L
